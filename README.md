@@ -1,0 +1,2 @@
+Este projeto é uma API desenvolvida em Java utilizando o framework Spring MVC. Ele é um gerenciador de uma escola que visa fornecer uma maneira fácil e eficiente para gerenciar uma escola, permitindo o cadastro, edição, exclusão e visualização de informações sobre alunos, professores, cursos, turmas, matrículas, disciplinas e contas de usuários.
+Ele é desenvolvido utilizando o framework Spring MVC e segue boas práticas de arquitetura e desenvolvimento de software. 
