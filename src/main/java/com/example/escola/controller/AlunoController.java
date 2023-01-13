@@ -18,13 +18,12 @@ public class AlunoController {
     @Autowired
     AlunoService alunoService;
     @PostMapping
-    public ResponseEntity<Aluno> listarAlunos(@RequestBody Aluno aluno_body){
-
+    public ResponseEntity<Aluno> matricular(@RequestBody Aluno aluno_body){
         return new ResponseEntity<>(alunoService.salvar(aluno_body), HttpStatus.CREATED);
     }
 
     @GetMapping(path = "list")
-    public List<Aluno> matricular(){
+    public List<Aluno> listarAlunos(){
         return  alunoService.listarTodosAlunos();
         //List.of(new Aluno(1L,"Silas","81992337067","894801","18/09/1995","Carpina","15975312",false,"Masculino","Solteiro","Pardo"),new Aluno(2L,"Edinho","81992337067","894801","18/09/1995","Carpina","15975312",false,"Masculino","Solteiro","Pardo"));
     }
