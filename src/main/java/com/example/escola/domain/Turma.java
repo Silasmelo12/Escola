@@ -1,4 +1,4 @@
-package com.example.Escola.domain;
+package com.example.escola.domain;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -6,23 +6,23 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
-public class Matricula {
+import java.util.List;
+
+public class Turma {
 
     @Id
-            @GeneratedValue(strategy = GenerationType.IDENTITY)
-    String ID;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long ID;
+
     @NotNull
     @NotEmpty
-    Aluno aluno;
+    String ano;
+    String horarios;
+    List<Aluno> alunos;
     @NotNull
     @NotEmpty
-    Turma turma;
+    int capacidade;
     @NotNull
     @NotEmpty
-    String data_matrícula;
-    Nota notas;
-    String frequencia;
-    @NotNull
-    @NotEmpty
-    String situação;
+    int trimestre;
 }
