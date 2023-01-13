@@ -28,7 +28,6 @@ public class Aluno {
     @NotNull
     String senha;
     @NotNull
-    @NotEmpty
     Boolean bolsista;
     @NotNull
     @NotEmpty
