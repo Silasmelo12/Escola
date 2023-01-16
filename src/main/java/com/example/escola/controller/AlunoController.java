@@ -1,7 +1,7 @@
 package com.example.escola.controller;
 
 import com.example.escola.domain.Aluno;
-import com.example.escola.repository.AlunoRepository;
+//import com.example.escola.repository.AlunoRepository;
 import com.example.escola.service.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,7 +14,6 @@ import java.util.List;
 @RequestMapping("alunos")
 public class AlunoController {
 
-    Aluno aluno;
     @Autowired
     AlunoService alunoService;
     @PostMapping
@@ -22,7 +21,7 @@ public class AlunoController {
         return new ResponseEntity<>(alunoService.salvar(aluno_body), HttpStatus.CREATED);
     }
 
-    @GetMapping(path = "list")
+    @GetMapping
     public List<Aluno> listarAlunos(){
         return  alunoService.listarTodosAlunos();
         //List.of(new Aluno(1L,"Silas","81992337067","894801","18/09/1995","Carpina","15975312",false,"Masculino","Solteiro","Pardo"),new Aluno(2L,"Edinho","81992337067","894801","18/09/1995","Carpina","15975312",false,"Masculino","Solteiro","Pardo"));
